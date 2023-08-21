@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@angular/forms": "^16.2.1",
+    "tailwind": "^4.0.0"
+  }
+}

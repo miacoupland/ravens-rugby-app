@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Sign up form</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="formGroup">
+      <label for="name">Player name</label>
+      <input
+        type="text"
+        id="nameField"
+        formControlName="nameField"
+        placeholder="John Adams"
+      />
+      <label for="pronouns">Pronouns</label>
+      <input type="text" id="pronounsField" formControlName="pronounsField" />
+      <label for="dietary">Dietary Requirements</label>
+      <input type="text" id="dietaryField" formControlName="dietaryField" />
+      <label for="allergies">Allergies</label>
+      <input type="text" id="allergiesField" formControlName="allergiesField" />
+    </div>
+  </form>
+</div>
