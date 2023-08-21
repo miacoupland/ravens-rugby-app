@@ -1,3 +1,16 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Scorno;
+  src: url("./assets/fonts/Rosario\ Nocera\ -\ Scorno\ demo\ heavy.otf")
+    format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Scorno;
+  src: url("./assets//fonts/Rosario\ Nocera\ -\ Scorno\ demo\ Medium.otf")
+    format("opentype");
+  font-weight: normal;
+}

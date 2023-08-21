@@ -1,13 +1,13 @@
-<div class="container">
-  <h2 class="text-center text-3xl m-4">Union Fixtures Sign-Up</h2>
+<div class="container w-full flex flex-col items-center">
+  <h2 class="text-center text-3xl m-4 font-bold">UNION FIXTURES SIGN-UP</h2>
   <form [formGroup]="signupForm" class="m-4" (ngSubmit)="onSubmit()">
-    <table class="table-fixed border-collapse">
+    <table class="table-fixed border-collapse font-normal">
       <thead>
         <tr>
-          <th class="bg-black text-white">Player Name</th>
-          <th class="bg-black text-white">Pronouns</th>
-          <th class="bg-black text-white">Dietary Requirements</th>
-          <th class="bg-black text-white">Allergies</th>
+          <th class="bg-black text-white">PLAYER NAME</th>
+          <th class="bg-black text-white">PRONOUNS</th>
+          <th class="bg-black text-white">DIETARY REQUIREMENTS</th>
+          <th class="bg-black text-white">ALLERGIES</th>
           <th class="bg-black text-white"></th>
         </tr>
       </thead>
@@ -59,7 +59,7 @@
         </tr>
       </tbody>
     </table>
-    <button type="button" (click)="addRow()">Add Row</button>
-    <button type="submit" [disabled]="!signupForm.valid">Submit</button>
+    <button type="button" (click)="addRow()" class="bg-black text-white rounded p-2 m-2">Add Row</button>
+    <button type="submit" class="bg-yellow text-white rounded p-2 m-2" [disabled]="!signupForm.valid">Submit</button>
   </form>
 </div>
