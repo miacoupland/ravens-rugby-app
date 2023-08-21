@@ -1,20 +1,65 @@
 <div class="container">
-  <h2>Sign up form</h2>
-  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-    <div class="formGroup">
-      <label for="name">Player name</label>
-      <input
-        type="text"
-        id="nameField"
-        formControlName="nameField"
-        placeholder="John Adams"
-      />
-      <label for="pronouns">Pronouns</label>
-      <input type="text" id="pronounsField" formControlName="pronounsField" />
-      <label for="dietary">Dietary Requirements</label>
-      <input type="text" id="dietaryField" formControlName="dietaryField" />
-      <label for="allergies">Allergies</label>
-      <input type="text" id="allergiesField" formControlName="allergiesField" />
-    </div>
+  <h2 class="text-center text-3xl m-4">Union Fixtures Sign-Up</h2>
+  <form [formGroup]="signupForm" class="m-4" (ngSubmit)="onSubmit()">
+    <table class="table-fixed border-collapse">
+      <thead>
+        <tr>
+          <th class="bg-black text-white">Player Name</th>
+          <th class="bg-black text-white">Pronouns</th>
+          <th class="bg-black text-white">Dietary Requirements</th>
+          <th class="bg-black text-white">Allergies</th>
+          <th class="bg-black text-white"></th>
+        </tr>
+      </thead>
+      <tbody formArrayName="fields">
+        <tr
+          *ngFor="let field of fieldControls; let i = index"
+          [formGroupName]="i"
+        >
+          <td class="border-y border-slate-700 p-2">
+            {{ i + 1 }}.
+            <input
+              type="text"
+              [id]="'name' + i"
+              formControlName="name"
+              placeholder="Player name"
+              class="bg-slate-100"
+            />
+          </td>
+          <td class="border border-slate-700 p-2">
+            <input
+              type="text"
+              [id]="'pronouns' + i"
+              formControlName="pronouns"
+              placeholder="He/Him"
+              class="bg-slate-100"
+            />
+          </td>
+          <td class="border border-slate-700 p-2">
+            <input
+              type="text"
+              [id]="'dietary' + i"
+              formControlName="dietary"
+              placeholder="..."
+              class="bg-slate-100"
+            />
+          </td>
+          <td class="border border-slate-700 p-2">
+            <input
+              type="text"
+              [id]="'allergies' + i"
+              formControlName="allergies"
+              placeholder="..."
+              class="bg-slate-100"
+            />
+          </td>
+          <td class="border-y border-slate-700 p-2">
+            <button type="button" (click)="removeRow(i)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" (click)="addRow()">Add Row</button>
+    <button type="submit" [disabled]="!signupForm.valid">Submit</button>
   </form>
 </div>

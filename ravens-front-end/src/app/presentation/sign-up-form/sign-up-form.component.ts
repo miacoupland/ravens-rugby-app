@@ -1,24 +1,50 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'sign-up-form',
   templateUrl: './sign-up-form.component.html',
   styleUrls: ['./sign-up-form.component.scss'],
 })
-export class SignUpFormComponent {
+export class SignUpFormComponent implements OnInit {
   public signupForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.signupForm = this.formBuilder.group({
-      nameField: ['', Validators.required],
-      pronounsField: ['', Validators.required],
-      dietaryField: [''],
-      allergiesField: [''],
+      fields: this.formBuilder.array([this.createRow()]),
+    });
+
+    for (let i = 0; i < 10; i++) {
+      this.addRow();
+    }
+  }
+
+  public ngOnInit(): void {}
+
+  public createRow(): FormGroup {
+    return this.formBuilder.group({
+      name: ['', Validators.required],
+      pronouns: ['', Validators.required],
+      dietary: [''],
+      allergies: [''],
     });
   }
 
-  onSubmit() {
+  get fieldControls() {
+    return (this.signupForm.get('fields') as FormArray).controls;
+  }
+
+  addRow() {
+    const fields = this.signupForm.get('fields') as FormArray;
+    fields.push(this.createRow());
+  }
+
+  removeRow(index: number) {
+    const rows = this.signupForm.get('fields') as FormArray;
+    rows.removeAt(index);
+  }
+
+  public onSubmit() {
     if (this.signupForm.valid) {
       console.log('valid');
     }
