@@ -1,0 +1,24 @@
+{
+  "team": {
+    "name": "Team Name",
+    "secretary": {
+      "name": "Secretary",
+      "number": "07888888888",
+      "email": "secretary@rugby.com"
+    },
+    "team": [
+      {
+        "playerName": "Player 2",
+        "pronouns": "He/Him",
+        "dietary": "N/A",
+        "allergies": "Cats"
+      },
+      {
+        "playerName": "Player 3",
+        "pronouns": "He/Him",
+        "dietary": "Lactose Intolerant",
+        "allergies": "N/A"
+      }
+    ]
+  }
+}
