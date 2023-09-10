@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-rugby-app.csproj": {}
+    "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-api\\ravens-rugby-app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-rugby-app.csproj": {
+    "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-api\\ravens-rugby-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-rugby-app.csproj",
+        "projectUniqueName": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-api\\ravens-rugby-app.csproj",
         "projectName": "ravens-rugby-app",
-        "projectPath": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-rugby-app.csproj",
+        "projectPath": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-api\\ravens-rugby-app.csproj",
         "packagesPath": "C:\\Users\\miaco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\obj\\",
+        "outputPath": "C:\\Users\\miaco\\OneDrive\\Documents\\GitHub\\ravens-rugby-app\\ravens-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
