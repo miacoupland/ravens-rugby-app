@@ -6,7 +6,8 @@ module.exports = {
       'yellow': '#fdc010',
       'black': '#000000',
       'white': '#FFFFFF',
-      'red': '#e11b22'
+      'red': '#e11b22',
+      "grey": '#dcdcdc',
     },
     fontFamily: {
       'sans': ['Scorno'],
