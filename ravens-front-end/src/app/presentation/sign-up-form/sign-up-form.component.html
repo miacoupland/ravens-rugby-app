@@ -22,8 +22,9 @@
               type="text"
               [id]="'name' + i"
               formControlName="name"
+              required
               placeholder="Player name"
-              class="bg-slate-100"
+              class="bg-slate-100 min-h-fit min-w-fit focus:outline-none"
             />
           </td>
           <td class="border border-slate-700 p-2">
@@ -31,8 +32,9 @@
               type="text"
               [id]="'pronouns' + i"
               formControlName="pronouns"
+              required
               placeholder="He/Him"
-              class="bg-slate-100"
+              class="bg-slate-100 focus:outline-none"
             />
           </td>
           <td class="border border-slate-700 p-2">
@@ -41,7 +43,7 @@
               [id]="'dietary' + i"
               formControlName="dietary"
               placeholder="..."
-              class="bg-slate-100"
+              class="bg-slate-100 focus:outline-none"
             />
           </td>
           <td class="border border-slate-700 p-2">
@@ -50,7 +52,7 @@
               [id]="'allergies' + i"
               formControlName="allergies"
               placeholder="..."
-              class="bg-slate-100"
+              class="bg-slate-100 focus:outline-none"
             />
           </td>
           <td class="border-y border-slate-700 p-2">
@@ -59,7 +61,7 @@
         </tr>
       </tbody>
     </table>
-    <button type="button" (click)="addRow()" class="bg-black text-white rounded p-2 m-2">Add Row</button>
-    <button type="submit" class="bg-yellow text-white rounded p-2 m-2" [disabled]="!signupForm.valid">Submit</button>
+    <button type="button" (click)="addRow()" class="bg-black text-white rounded pb-2 px-2 m-2">Add Row</button>
+    <button type="submit" class="bg-yellow text-white rounded pb-2 px-2 m-2 disabled:bg-grey" [disabled]="!signupForm.valid">Submit</button>
   </form>
 </div>
