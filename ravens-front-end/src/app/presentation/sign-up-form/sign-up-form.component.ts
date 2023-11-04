@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'sign-up-form',
@@ -11,6 +17,16 @@ export class SignUpFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.signupForm = this.formBuilder.group({
+      teamName: new FormControl(null, Validators.required),
+      secretaryName: new FormControl(null, Validators.required),
+      secretaryEmail: new FormControl(null, [
+        Validators.required,
+        Validators.email,
+      ]),
+      secretaryPhone: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('[0-9]{11}'),
+      ]),
       fields: this.formBuilder.array([this.createRow()]),
     });
 

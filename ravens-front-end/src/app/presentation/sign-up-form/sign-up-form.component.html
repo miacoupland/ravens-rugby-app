@@ -1,7 +1,65 @@
 <div class="container w-full flex flex-col items-center">
   <h2 class="text-center text-3xl m-4 font-bold">UNION FIXTURES SIGN-UP</h2>
   <form [formGroup]="signupForm" class="m-4" (ngSubmit)="onSubmit()">
-    <table class="table-fixed border-collapse font-normal">
+    <table class="table-fixed border-collapse font-normal mb-5 w-full max-w-6xl">
+      <thead>
+        <tr>
+          <th colspan="2" class="bg-black text-white ">TEAM INFORMATION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border-y border-slate-700 p-2">
+            Team Name:
+            <input
+              type="text"
+              [id]="'teamName'"
+              formControlName="teamName"
+              required
+              placeholder="Team Name"
+              class="bg-slate-100 min-h-fit min-w-fit focus:outline-none"
+            />
+          </td>
+          <td class="border-y border-slate-700 p-2">
+            Fixtures Secretary:
+            <input
+              type="text"
+              [id]="'secretaryName'"
+              formControlName="secretaryName"
+              required
+              placeholder="Fixtures Secretary"
+              class="bg-slate-100 min-h-fit min-w-fit focus:outline-none"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="border-y border-slate-700 p-2">
+            Fixtures Email:
+            <input
+              type="email"
+              [id]="'secretaryEmail'"
+              formControlName="secretaryEmail"
+              required
+              placeholder="Fixtures Email"
+              class="bg-slate-100 min-h-fit min-w-fit focus:outline-none"
+            />
+          </td>
+          <td class="border-y border-slate-700 p-2">
+            Fixtures Phone No:
+            <input
+              type="text"
+              [id]="'secretaryPhone'"
+              formControlName="secretaryPhone"
+              required
+              placeholder="Fixtures Phone No."
+              class="bg-slate-100 min-h-fit min-w-fit focus:outline-none"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table-fixed border-collapse font-normal w-full max-w-6xl">
       <thead>
         <tr>
           <th class="bg-black text-white">PLAYER NAME</th>
@@ -61,7 +119,19 @@
         </tr>
       </tbody>
     </table>
-    <button type="button" (click)="addRow()" class="bg-black text-white rounded pb-2 px-2 m-2">Add Row</button>
-    <button type="submit" class="bg-yellow text-white rounded pb-2 px-2 m-2 disabled:bg-grey" [disabled]="!signupForm.valid">Submit</button>
+    <button
+      type="button"
+      (click)="addRow()"
+      class="bg-black text-white rounded pb-2 px-2 m-2"
+    >
+      Add Row
+    </button>
+    <button
+      type="submit"
+      class="bg-yellow text-white rounded pb-2 px-2 m-2 disabled:bg-grey"
+      [disabled]="!signupForm.valid"
+    >
+      Submit
+    </button>
   </form>
 </div>
